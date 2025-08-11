@@ -84,6 +84,7 @@ This project uses Checkstyle (CLI jar) and EditorConfig to enforce a consistent 
     - `OneStatementPerLine`
   - Imports:
     - `ImportOrder` under `TreeWalker`: groups `java, javax, org, com`; `option=top`; `sortStaticImportsAlphabetically=true`
+    - `UnusedImports` to flag and fail on unused imports
   - Other:
     - `MagicNumber` enabled; ignores `-1,0,1,2`, annotations, and `hashCode`
 

@@ -9,7 +9,7 @@ public class RootController {
 
 	@GetMapping("/")
 	public ResponseEntity<String> root() {
-	String uselessVariable = "This is a useless variable";
+		String uselessVariable = "This is a useless variable";
 		return ResponseEntity.ok("API Root: /api/v1/");
 	}
 
