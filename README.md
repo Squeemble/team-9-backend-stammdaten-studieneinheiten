@@ -3,11 +3,7 @@
 UserService is a Python FastAPI application designed to...
 
 ## Features
-- RESTful API for user management
-- Integration with H2 in-memory database
-- Dependency injection and configuration using Spring Boot
-- Unit and integration testing with JUnit 5
-- Maven-based build and dependency management
+- TODO
 
 ## Prerequisites
 - [UV](https://docs.astral.sh/uv/getting-started/installation/#__tabbed_1_2): Modern Python Package Manager
@@ -40,6 +36,9 @@ Now run the service:
 ```bash
 uvicorn app.main:app --reload
 ```
+The service is available on Port 8000 by default. Use the `--port` option to specify a different port.
+
+FastAPI automatically generates a Swagger Documentation under `/docs/`
 
 ## Testing
 ### Unit Tests
