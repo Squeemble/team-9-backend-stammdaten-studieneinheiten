@@ -1,0 +1,21 @@
+[project]
+name = "team-9-backend-stammdaten-studieneinheiten"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.116.1",
+    "sqlalchemy>=2.0.43",
+]
+
+[tool.ruff]
+line-length = 80
+indent-width = 2
+fix = true
+
+[tool.ruff.format]
+indent-style = "space"
+
+[tool.ruff.lint]
+select = ["E", "F", "UP"]

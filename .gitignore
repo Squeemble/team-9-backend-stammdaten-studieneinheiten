@@ -1,37 +1,57 @@
-HELP.md
-target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.egg-info/
+*.egg
+*.log
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
+# Byte-compiled / cache
+*.sqlite3
+*.db
+instance/
+.cache/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
+# IDEs / Editors
 .vscode/
+.idea/
+*.swp
+*.swo
 
+# OS files
+.DS_Store
+Thumbs.db
 
-### MacOs ###
-*/.DS_STORE
+# Docker
+*.pid
+*.seed
+*.tar
+*.bak
+*.tmp
+*.lock
+docker-compose.override.yml
+
+# Kubernetes
+k8s/*.local.yaml
+
+# Environment / secrets
+.env
+.env.*
+secrets.yaml
+
+# Build / dist
+dist/
+build/
+*.egg-info/
