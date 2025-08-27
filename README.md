@@ -1,6 +1,5 @@
-# UserService
-
-UserService is a Python FastAPI application designed to...
+# Team-9 Backend
+The Backend service for the [Team-9 Frontend](https://github.com/Agile-Software-Engineering-25/team-9-frontend-stammdaten-studieneinheiten)
 
 ## Features
 - TODO
@@ -35,6 +34,16 @@ source .venv/bin/activate
 Now run the service:
 ```bash
 uvicorn app.main:app --reload
+
+# If this doesnt work try one of the following
+uv run uvicorn app.main:app --reload
+python -m uvicorn app.main:app --reload
+
+# If you have MAKE installed you can also run
+make run
+
+# On windows you can run the PS Script
+.\dev.ps1
 ```
 The service is available on Port 8000 by default. Use the `--port` option to specify a different port.
 
