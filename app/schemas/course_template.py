@@ -1,5 +1,4 @@
-import uuid
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
 class CourseTemplateBase(BaseModel):
@@ -12,4 +11,6 @@ class CourseTemplateCreate(CourseTemplateBase):
 
 
 class CourseTemplateRead(CourseTemplateBase):
-  id: uuid.UUID
+  id: int
+
+  model_config = ConfigDict(from_attributes=True)

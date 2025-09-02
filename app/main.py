@@ -4,6 +4,7 @@ from app.api import api_router
 from app.core.db import Base, engine
 
 from app.models import course_template
+from app.models import course
 
 Base.metadata.create_all(bind=engine)
 

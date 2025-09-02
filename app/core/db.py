@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, Integer, Column
 from sqlalchemy.orm import sessionmaker, DeclarativeBase
 import os
 
@@ -16,6 +16,10 @@ SessionLocal = sessionmaker(bind=engine, autoflush=False)
 
 class Base(DeclarativeBase):
   pass
+
+
+class BaseIdMixin:
+  id = Column(Integer, primary_key=True, index=True, autoincrement=True)
 
 
 def get_db():

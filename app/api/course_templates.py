@@ -13,7 +13,7 @@ def list_course_templates(db: Session = Depends(get_db)):
 
 
 @router.get("/{template_id}", response_model=CourseTemplateRead)
-def get_course_template(template_id: str, db: Session = Depends(get_db)):
+def get_course_template(template_id: int, db: Session = Depends(get_db)):
   template = course_template_service.get_course_template(db, template_id)
   if not template:
     raise HTTPException(status_code=404, detail="Course Template not found")
