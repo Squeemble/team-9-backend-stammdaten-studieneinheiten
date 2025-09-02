@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from app.repositories import course_template_repository
+from app.repositories.course_template_repository import course_template_crud
 from app.schemas.course_template import CourseTemplateCreate
 
 
@@ -9,12 +9,12 @@ from app.schemas.course_template import CourseTemplateCreate
 
 
 def list_course_templates(db: Session):
-  return course_template_repository.get_all(db)
+  return course_template_crud.get_all(db)
 
 
-def get_course_template(db: Session, course_id: str):
-  return course_template_repository.get_by_id(db, course_id)
+def get_course_template(db: Session, template_id: int):
+  return course_template_crud.get(db, template_id)
 
 
 def create_course_template(db: Session, course: CourseTemplateCreate):
-  return course_template_repository.create(db, course)
+  return course_template_crud.create(db, course)
