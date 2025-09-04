@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.api import api_router
 from app.core.db import Base, engine
 
+# you need to import these so their models get registered
 from app.models import course_template
 from app.models import course
 
