@@ -2,7 +2,9 @@
 The Backend service for the [Team-9 Frontend](https://github.com/Agile-Software-Engineering-25/team-9-frontend-stammdaten-studieneinheiten)
 
 ## Features
-- TODO
+- create course templates and instances
+- ...  
+**TODO**
 
 ## Prerequisites
 - [UV](https://docs.astral.sh/uv/getting-started/installation/#__tabbed_1_2): Modern Python Package Manager
@@ -31,27 +33,26 @@ PS> .venv\Scripts\activate
 source .venv/bin/activate
 ```
 
-Now run the service:
-```bash
-uvicorn app.main:app --reload
+**Now run the service with one of the following commands:**
+- ` uvicorn app.main:app --reload `  
+- `uv run uvicorn app.main:app --reload`
+- `python -m uvicorn app.main:app --reload`
+- `make run`
+- `.\dev.ps1`
 
-# If this doesnt work try one of the following
-uv run uvicorn app.main:app --reload
-python -m uvicorn app.main:app --reload
-
-# If you have MAKE installed you can also run
-make run
-
-# On windows you can run the PS Script
-.\dev.ps1
-```
-The service is available on Port 8000 by default. Use the `--port` option to specify a different port.
+The service is now available on Port 8000 by default. Use the `--port` option to specify a different port.
 
 FastAPI automatically generates a Swagger Documentation under `/docs/`
 
 ## Testing
 ### Unit Tests
-TODO
+Unit Tests are defined in `/tests/`. 
+
+To run all Unit-Tests make sure your packets are synced (`uv sync`) and your environment is activated ([see here](#windows)).  
+Then run:
+```bash
+pytest
+```
 
 ## Code Style & Linting
 If you are using VS-Code as your text editor of choice, you can install the following extensions to make development easier:
@@ -70,4 +71,6 @@ You can configure special settings for your workspace in VS-Code with a `.vscode
 
 ## Resources
 - [FastAPI Documentation](https://fastapi.tiangolo.com/learn/)
+- [Pytest Documentation](https://docs.pytest.org/en/stable/index.html)
+- [SQLAlchemy Documentation](https://docs.sqlalchemy.org/en/20/)
 - [UV Documentation](https://docs.astral.sh/uv/)
